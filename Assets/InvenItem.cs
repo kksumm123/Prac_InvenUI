@@ -17,7 +17,7 @@ public class InvenItem : MonoBehaviour, IPointerClickHandler
     {
         invenItemInfo = item;
         ItemDataInfo itemDataInfo = invenItemInfo.GetItemDataInfo();
-        GetComponent<Image>.sprite = itemDataInfo.icon;
-
+        GetComponentInChildren<Image>().sprite = itemDataInfo.icon;
+        GetComponentInChildren<Text>().text = item.count.ToString();
     }
 }
