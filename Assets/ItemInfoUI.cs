@@ -32,7 +32,7 @@ public class ItemInfoUI : MonoBehaviour
     public void ShowShopItemInfo(ItemDataInfo itemDataInfo)
     {
         shopBtn.SetActive(true);
-        shopBtn.SetActive(false);
+        invenBtn.SetActive(false);
         SetItemInfo(itemDataInfo);
     }
 
