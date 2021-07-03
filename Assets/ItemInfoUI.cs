@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,9 +29,30 @@ public class ItemInfoUI : MonoBehaviour
         desciption = transform.Find("Description").GetComponent<Text>();
         shopBtn = transform.Find("ShopBtn").gameObject;
         invenBtn = transform.Find("InvenBtn").gameObject;
+        shopBtn.transform.Find("Button")
+            .GetComponent<Button>().onClick.AddListener(ItemBuy);
+        invenBtn.transform.Find("Button")
+            .GetComponent<Button>().onClick.AddListener(ItemSell);
         shopBtn.SetActive(false);
         invenBtn.SetActive(false);
     }
+
+    void ItemBuy()
+    {
+        UserData.instance.Gold -= itemDataInfo.sellPrice;
+        var newItem = new InvenItemInfo();
+        newItem.ItemID = itemDataInfo.ItemID;
+        newItem.count = 1;
+        newItem.getData = DateTime.Now.ToString();
+        UserData.instance.invenItems.Add(newItem);
+        InvenUI.instance.RefreshUI();
+        MoneyUI.instance.RefreshUI();
+    }
+    void ItemSell()
+    {
+        Debug.Log("ÆÈ±â");
+    }
+
 
     public void ShowShopItemInfo(ItemDataInfo itemDataInfo)
     {

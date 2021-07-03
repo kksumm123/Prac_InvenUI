@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47ad41000423684abf3a03e54de331f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemBase: {fileID: 0}
 --- !u!1 &391940620
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391940621}
+  - component: {fileID: 391940622}
   m_Layer: 5
   m_Name: ItemBase
   m_TagString: Untagged
@@ -237,6 +239,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &391940622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391940620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843748355194e6549a3bec1934f7443c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453703404
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +817,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9e90cdc91fd364c9d19a00e78637d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemDataInfo:
+    name: 
+    ItemID: 0
+    type: 0
+    icon: {fileID: 0}
+    description: 
+    buyPrice: 0
+    sellPrice: 0
+  invenItemInfo:
+    ItemID: 0
+    count: 0
+    getData: 
 --- !u!1 &1294881324
 GameObject:
   m_ObjectHideFlags: 0

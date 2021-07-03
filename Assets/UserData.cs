@@ -7,7 +7,7 @@ public class InvenItemInfo
 {
     public int ItemID;
     public int count;
-    public int getData;
+    public string getData;
 
     public ItemDataInfo GetItemDataInfo()
     {
