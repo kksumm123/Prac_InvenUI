@@ -24,7 +24,6 @@ public class UserData : MonoBehaviour
         Load();
     }
 
-
     int gold;
     int dia;
     public int Gold
@@ -37,11 +36,14 @@ public class UserData : MonoBehaviour
         get { return dia; }
         set { dia = value; }
     }
+    public List<InvenItemInfo> invenItems;
 
     void Load()
     {
         Gold = HasKeyLoadInt("gold", 1000);
         Dia = HasKeyLoadInt("dia", 200);
+
+        MoneyUI.instance.RefreshUI();
 
         int HasKeyLoadInt(string key, int defaultValue)
         {
@@ -50,8 +52,6 @@ public class UserData : MonoBehaviour
             else
                 return defaultValue;
         }
-
-        MoneyUI.instance.RefreshUI();
     }
     void Save()
     {
