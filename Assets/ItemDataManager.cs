@@ -11,7 +11,7 @@ public enum ItemType
     Etc,
 }
 [System.Serializable]
-public class ItemData
+public class ItemDataInfo
 {
     // Name, ItemID, Type, Icon, Description, BuyPrice, SellPrice
     public string name;
@@ -24,7 +24,7 @@ public class ItemData
 }
 public class ItemDataManager : MonoBehaviour
 {
-    public List<ItemData> itemDataList = new List<ItemData>();
+    public List<ItemDataInfo> itemDataList = new List<ItemDataInfo>();
     public static ItemDataManager instance;
     private void Awake()
     {
