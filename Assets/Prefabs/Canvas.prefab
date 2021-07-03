@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1782055053343768277}
   - component: {fileID: 1782055053343768278}
   - component: {fileID: 1782055053343768279}
+  - component: {fileID: 5215534398263110894}
   m_Layer: 5
   m_Name: ShopUI
   m_TagString: Untagged
@@ -108,6 +109,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5215534398263110894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782055053343768281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdddd03f035c8247a6feb3edac42f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782055053472967642
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,8 +672,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782055054456038918}
+  - component: {fileID: 4348641664717910861}
   m_Layer: 5
-  m_Name: Item
+  m_Name: ItemBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,6 +701,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4348641664717910861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782055054456038919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5835b46d9be382459fd3996ef3b5a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782055054574859035
 GameObject:
   m_ObjectHideFlags: 0
