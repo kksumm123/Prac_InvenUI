@@ -8,6 +8,7 @@ public enum ItemType
     Weapon,
     Armor,
     Potion,
+    Etc,
 }
 [System.Serializable]
 public class ItemData
