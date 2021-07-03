@@ -2,7 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
+public class InvenItemInfo
+{
+    public int ItemID;
+    public int count;
+    public int getData;
 
+    public ItemDataInfo GetItemDataInfo()
+    {
+        return ItemDataManager.instance.itemDataList.Find(x => x.ItemID == this.ItemID);
+    }
+}
 public class UserData : MonoBehaviour
 {
     // 유저의 재화(gold, dia), 아이템 저장해줘야함
