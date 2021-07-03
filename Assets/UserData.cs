@@ -39,6 +39,8 @@ public class UserData : MonoBehaviour
             else
                 return defaultValue;
         }
+
+        MoneyUI.instance.RefreshUI();
     }
     void Save()
     {
