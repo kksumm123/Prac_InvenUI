@@ -9,7 +9,7 @@ public enum ItemType
     Armor,
     Potion,
 }
-public class ItemData : MonoBehaviour
+public class ItemData
 {
     // Name, ItemID, Type, Icon, Description, BuyPrice, SellPrice
     public string name;
@@ -19,4 +19,12 @@ public class ItemData : MonoBehaviour
     public string description;
     public int buyPrice;
     public int sellPrice;
+}
+public class ItemDataManager : MonoBehaviour
+{
+    public static ItemDataManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 }
