@@ -7,6 +7,9 @@ public class ItemInfoUI : MonoBehaviour
 {
     // Shop, Iven에서 Item이 클릭되면 표시해줘야함
     public static ItemInfoUI instance;
+    public ItemDataInfo itemDataInfo; // 상점에 있는 아이템을 구매할 때 사용
+    public InvenItemInfo invenItemInfo; // 인벤에 있는 아이템을 판매할 때 사용
+
     private void Awake()
     {
         instance = this;
@@ -33,6 +36,15 @@ public class ItemInfoUI : MonoBehaviour
     {
         shopBtn.SetActive(true);
         invenBtn.SetActive(false);
+        SetItemInfo(itemDataInfo);
+    }
+    public void ShowInvenItem(InvenItemInfo invenItemInfo)
+    {
+        this.invenItemInfo = invenItemInfo;
+        invenBtn.SetActive(true);
+        shopBtn.SetActive(false);
+
+        var itemDataInfo = invenItemInfo.GetItemDataInfo();
         SetItemInfo(itemDataInfo);
     }
 
