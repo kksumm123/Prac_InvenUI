@@ -15,6 +15,7 @@ public class InvenUI : MonoBehaviour
     [SerializeField] InvenItem itemBase;
     void Start()
     {
+        itemBase = (InvenItem)FindObjectOfType(typeof(InvenItem), true);
         RefreshUI();
     }
 
@@ -24,7 +25,6 @@ public class InvenUI : MonoBehaviour
         childitemlist.ForEach(x => Destroy(x));
         childitemlist.Clear();
 
-        itemBase = (InvenItem)FindObjectOfType(typeof(InvenItem), true);
         itemBase.gameObject.SetActive(true);
         Debug.Assert(itemBase != null, "itembase Å½»ö ½ÇÆÐ");
         foreach (var item in UserData.instance.invenItems)
