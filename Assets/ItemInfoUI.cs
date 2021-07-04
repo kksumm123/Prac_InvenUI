@@ -72,6 +72,7 @@ public class ItemInfoUI : MonoBehaviour
 
     void SetItemInfo(ItemDataInfo itemDataInfo)
     {
+        this.itemDataInfo = itemDataInfo;
         icon.sprite = itemDataInfo.icon;
         itemName.text = itemDataInfo.name;
         desciption.text = itemDataInfo.description;

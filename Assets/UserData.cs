@@ -21,6 +21,9 @@ public class UserData : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
         Load();
     }
 
