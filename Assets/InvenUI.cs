@@ -27,10 +27,12 @@ public class InvenUI : MonoBehaviour
 
         itemBase.gameObject.SetActive(true);
         Debug.Assert(itemBase != null, "itembase Å½»ö ½ÇÆÐ");
+        InvenItem newItem;
         foreach (var item in UserData.instance.invenItems)
         {
-            var newItem = Instantiate(itemBase, itemBase.transform.parent);
+            newItem = Instantiate(itemBase, itemBase.transform.parent);
             newItem.Init(item);
+            childitemlist.Add(newItem.gameObject);
         }
         itemBase.gameObject.SetActive(false);
     }
